@@ -9,7 +9,6 @@ import {
 import { Textarea } from "../../common/Forms/Forms";
 
 const MyPosts = (props) => {
-  console.log("RENDER");
   let postsElement = [...props.posts]
     .reverse()
     .map((p) => <Post message={p.message} key={p.id} likes={p.likes} />);

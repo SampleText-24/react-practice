@@ -1,8 +1,7 @@
 import React from "react";
 import c from "./Users.module.css";
-import userPhoto from "../../assets/images/c01278219b37218b4e0d49713ae21b70.jpg";
+import userPhoto from "../../assets/images/unnamed.png";
 import { NavLink } from "react-router-dom";
-import Pagination from "../common/Pagination/Pagination";
 //prettier-ignore
 
 const User = ({user, followingInProgress, unfollow, follow}) => {
