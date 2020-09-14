@@ -1,0 +1,21 @@
+.nav {
+    grid-area: n;
+
+    padding: 55px;
+    background-color: #9bf6d2;
+}
+
+.item a {
+    color: #5a5a5a;
+    transition: 0.2s;
+    text-decoration: none;
+}
+.item a:hover {
+    color: goldenrod;
+}
+.item a.activeLink {
+    color: goldenrod;
+}
+.item:last-child {
+    padding-top: 50px;
+}

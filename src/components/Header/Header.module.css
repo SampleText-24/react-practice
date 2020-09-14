@@ -1,0 +1,33 @@
+.header {
+    grid-area: h;
+
+    background-color: #9bf6d2;
+}
+
+.header img {
+    padding-left: 50px;
+    width: 74px;
+}
+
+.loginBlock {
+    padding-top: 15px;
+    padding-right: 15px;
+
+    float: right;
+}
+
+.loginBlock a {
+    text-decoration: none;
+    color: #5a5a5a;
+
+    transition: 0.2s;
+}
+
+.loginBlock a.activeLink {
+    color: goldenrod;
+}
+
+.loginBlock a:hover {
+    color: goldenrod;
+}
+

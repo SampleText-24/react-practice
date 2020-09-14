@@ -1,0 +1,57 @@
+
+.pageButtons {
+    cursor: pointer;
+}
+
+.paginator {
+    margin: 10px
+}
+
+.pageNumber {
+    padding: 3px 6px;
+    border: 1px solid transparent;
+    border-radius: 20%;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.4s;
+    border-right: 0
+}
+
+.pageNumber.selectedPage {
+    font-weight: bold;
+    color: black;
+    background-color: #9bf6d2;
+
+
+}
+
+.pageNumber:hover {
+    background-color: #9bf6d2;
+    color: black;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 3px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button1 {
+    background-color: transparent;
+    color: white;
+}
+
+.button1:hover {
+    background-color: #9bf6d2;
+    color: black;
+}
+
