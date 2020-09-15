@@ -9,7 +9,12 @@ import c from "./../common/Forms/Forms.module.css";
 
 const Login = (props) => {
   let onSubmit = (formData) => {
-    props.login(formData.email, formData.password, formData.rememberMe);
+    props.login(
+      formData.email,
+      formData.password,
+      formData.rememberMe,
+      formData.captcha
+    );
   };
 
   if (props.isAuth) {
@@ -19,7 +24,7 @@ const Login = (props) => {
   return (
     <div>
       <h1>Login</h1>
-      <LoginReduxForm onSubmit={onSubmit} />
+      <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl} />
     </div>
   );
 };
@@ -38,6 +43,12 @@ const LoginForm = (props) => {
         "Remember Me"
       )}
 
+      {props.captchaUrl && <img src={props.captchaUrl} />}
+      {props.captchaUrl &&
+        createField("Symbols from captcha", "captcha", Input, "null", [
+          required,
+        ])}
+
       {props.error && <div className={c.formSummaryError}>{props.error}</div>}
       <div>
         <button>Login</button>
@@ -52,6 +63,7 @@ const LoginReduxForm = reduxForm({
 
 const mapStateToProps = (state) => ({
   isAuth: state.auth.isAuth,
+  captchaUrl: state.auth.captchaUrl,
 });
 
 export default connect(mapStateToProps, { login, logout })(Login);
